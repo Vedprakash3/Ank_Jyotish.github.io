@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>नक्षत्र - 9 ग्रह<br>चंद्र किसके नक्षत्र में है?</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      max-width: 300px;
+      margin: 20px auto;
+    }
+
+    .grid-container button {
+      padding: 20px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .grid-container button:hover {
+      background-color: #45a049;
+    }
+
+    .nakshatra {
+      font-size: 18px;
+      color: #333;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 80%;
+      margin: 20px auto;
+      line-height: 1.6;
+    }
+
+    .nakshatra ul {
+      text-align: left;
+      padding-left: 20px;
+    }
+
+    .nakshatra li {
+      list-style-type: "•";
+    }
+  </style>
+</head>
+<body>
+
+  <h1>नक्षत्र - 9 ग्रह<br>चंद्र किसके नक्षत्र में है?</h1>
+
+  <div class="grid-container">
+    <button onclick="showNakshatra(1)">सूर्य<br>1</button>
+    <button onclick="showNakshatra(2)">चंद्र<br>2</button>
+    <button onclick="showNakshatra(3)">गुरु<br>3</button>
+    <button onclick="showNakshatra(4)">राहु<br>4</button>
+    <button onclick="showNakshatra(5)">बुध<br>5</button>
+    <button onclick="showNakshatra(6)">शुक्र<br>6</button>
+    <button onclick="showNakshatra(7)">केतु<br>7</button>
+    <button onclick="showNakshatra(8)">शनि<br>8</button>
+    <button onclick="showNakshatra(9)">मंगल<br>9</button>
+  </div>
+
+  <div id="nakshatra" class="nakshatra"></div>
+
+  <script>
+    const nakshatras = [
+      // सूर्य
+      `<strong>सूर्य:</strong><ul>
+        <li>कृतिका (अ, ई, उ, ऐ)</li>
+        <li>उत्तर फाल्गुनी (टे, टो, पा, पी)</li>
+        <li>उत्तराषाढ़ा (भे, भो, जा, जी)</li>
+      </ul>`,
+      
+      // चंद्र
+      `<strong>चंद्र:</strong><ul>
+        <li>रोहिणी (ओ, वा, वी, वू)</li>
+        <li>हस्त (पू, ष, ण, ठ)</li>
+        <li>श्रवण (जू, जे, जो, खी)</li>
+      </ul>`,
+      
+      // गुरु
+      `<strong>गुरु:</strong><ul>
+        <li>पुनर्वसु (के, को, हा, ही)</li>
+        <li>विशाखा (ती, तू, ते, तो)</li>
+        <li>पूर्वभाद्रपद (से, सो, दा, दी)</li>
+      </ul>`,
+      
+      // राहु
+      `<strong>राहु:</strong><ul>
+        <li>आद्रा (कू, घ, ङ, छ)</li>
+        <li>स्वाति (रू, रे, रो, ता)</li>
+        <li>शतभिषा (गो, सा, सी, सू)</li>
+      </ul>`,
+      
+      // बुध
+      `<strong>बुध:</strong><ul>
+        <li>अश्लेषा (डी, डू, डे, डो)</li>
+        <li>ज्येष्ठा (नो, या, यी, यू)</li>
+        <li>रेवती (दे, दो, च, ची)</li>
+      </ul>`,
+      
+      // शुक्र
+      `<strong>शुक्र:</strong><ul>
+        <li>भरणी (ली, लू, ले, लो)</li>
+        <li>पूर्व फाल्गुनी (मो, टा, टी, टू)</li>
+        <li>पूर्वाषाढ़ा (भू, धा, फा, ढा)</li>
+      </ul>`,
+      
+      // केतु
+      `<strong>केतु:</strong><ul>
+        <li>अश्विनी (चु, चे, चो, ला)</li>
+        <li>मघा (मा, मी, मू, मे)</li>
+        <li>मूल (ये, यो, भा, भी)</li>
+      </ul>`,
+      
+      // शनि
+      `<strong>शनि:</strong><ul>
+        <li>पुष्य (हु, हे, हो, डा)</li>
+        <li>अनुराधा (ना, नी, नू, ने)</li>
+        <li>उत्तरभाद्रपद (दू, थ, झ, ण)</li>
+      </ul>`,
+      
+      // मंगल
+      `<strong>मंगल:</strong><ul>
+        <li>मृगशिरा (वे, वो, का, की)</li>
+        <li>चित्रा (पे, पो, रा, री)</li>
+        <li>धनिष्ठा (गा, गी, गु, गे)</li>
+      </ul>`
+    ];
+
+    function showNakshatra(number) {
+      document.getElementById("nakshatra").innerHTML = nakshatras[number - 1];
+    }
+  </script>
+
+</body>
+</html>
